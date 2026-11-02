@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Gold Metallic Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5c0"/>
+      <stop offset="30%" stop-color="#f59e0b"/>
+      <stop offset="65%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+
+    <linearGradient id="goldShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#fef08a"/>
+      <stop offset="60%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b45309"/>
+      <animate attributeName="x1" from="-100%" to="200%" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="0%" to="300%" dur="2.4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Radial Dark Velvet Glow -->
+    <radialGradient id="discBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a0d18"/>
+      <stop offset="65%" stop-color="#12060c"/>
+      <stop offset="100%" stop-color="#070205"/>
+    </radialGradient>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { filter: drop-shadow(0 0 1px #d4af37); }
+        50% { filter: drop-shadow(0 0 4px #fef08a) drop-shadow(0 0 7px #f59e0b); }
+      }
+      @keyframes spinStars {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes crownSparkle {
+        0%, 100% { opacity: 0.4; transform: scale(0.85); }
+        50% { opacity: 1; transform: scale(1.25); }
+      }
+      .ring-pulse {
+        animation: pulseGlow 2.4s ease-in-out infinite;
+      }
+      .star-spin {
+        transform-origin: 32px 32px;
+        animation: spinStars 14s linear infinite;
+      }
+      .crown-gem {
+        transform-origin: 32px 14px;
+        animation: crownSparkle 1.8s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Circular Outer Medallion -->
+  <circle cx="32" cy="32" r="30" fill="url(#discBg)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="rgba(212, 175, 55, 0.45)" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+  <!-- Rotating Orbiting Sparkles -->
+  <g class="star-spin">
+    <circle cx="32" cy="3.5" r="1.2" fill="#fff5c0"/>
+    <circle cx="60.5" cy="32" r="1.2" fill="#fff5c0"/>
+    <circle cx="32" cy="60.5" r="1.2" fill="#fff5c0"/>
+    <circle cx="3.5" cy="32" r="1.2" fill="#fff5c0"/>
+  </g>
+
+  <!-- Royal Crown on top of D -->
+  <g class="ring-pulse" transform="translate(0, 1)">
+    <!-- Crown Base -->
+    <path d="M22 17 L20 12 L26 14.5 L32 9 L38 14.5 L44 12 L42 17 Z" fill="url(#goldGrad)" stroke="#fef08a" stroke-width="0.6"/>
+    <!-- Crown Jewels -->
+    <circle cx="20" cy="11.5" r="1" fill="#ffffff" class="crown-gem"/>
+    <circle cx="32" cy="8.5" r="1.3" fill="#ffffff" class="crown-gem"/>
+    <circle cx="44" cy="11.5" r="1" fill="#ffffff" class="crown-gem"/>
+  </g>
+
+  <!-- Ornate Royal Letter "D" -->
+  <!-- Handcrafted Serif Monogram with Flourish -->
+  <g class="ring-pulse" filter="url(#goldGlow)">
+    <!-- Main stem and bow of D -->
+    <path d="
+      M 21 21
+      L 31 21
+      C 41 21, 46 25, 46 34
+      C 46 43, 40 48, 29 48
+      L 21 48
+      L 21 45
+      L 24 45
+      L 24 24
+      L 21 24
+      Z
+      M 28 24.5
+      L 28 44.5
+      L 31 44.5
+      C 37 44.5, 41.5 41, 41.5 34
+      C 41.5 27.5, 37 24.5, 31 24.5
+      Z
+    " fill="url(#goldShimmer)"/>
+
+    <!-- Decorative Top & Bottom Serif Flourishes -->
+    <path d="M 19 21 L 27 21 L 27 23 L 19 23 Z" fill="url(#goldGrad)"/>
+    <path d="M 19 46 L 27 46 L 27 48 L 19 48 Z" fill="url(#goldGrad)"/>
+    
+    <!-- Inner Heart Accent inside D bowl -->
+    <path d="M 33.5 32 C 33.5 30.5, 31.5 29.5, 30.5 31 C 29.5 29.5, 27.5 30.5, 27.5 32 C 27.5 33.8, 30.5 36, 30.5 36 C 30.5 36, 33.5 33.8, 33.5 32 Z" fill="#b91c1c" opacity="0.85"/>
+  </g>
+
+  <!-- Twinkling 4-Point Star Flare on D -->
+  <g transform="translate(42, 23)">
+    <path d="M 0 -3.5 Q 0 0 -3.5 0 Q 0 0 0 3.5 Q 0 0 3.5 0 Q 0 0 0 -3.5 Z" fill="#ffffff">
+      <animateTransform attributeName="transform" type="scale" values="0.7;1.3;0.7" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Deepa ✨ | A Magical Surprise</title>
+
+  <!-- Animated Royal "D" Favicon (Replaces Default Browser Globe Icon) -->
+  <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2.8">
+</head>
+<body>
+  <!-- Ambient Particle Canvas for Stardust & Real Firecracker Bursts -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Fullscreen 3D Sky Lantern Festival Container (Outer Box & Viewport) -->
+  <div class="fullscreen-lantern-sky" id="fullscreen-lantern-sky"></div>
+
+  <!-- Fixed Royal Brand Monogram Header (Top-Left) -->
+  <div class="royal-brand-header" id="royal-brand-header" title="Deepa • 21st Milestone">
+    <div class="brand-d-emblem">
+      <div class="brand-d-orbit">
+        <span class="orbit-dot">✦</span>
+      </div>
+      <span class="brand-d-crown">👑</span>
+      <span class="brand-d-char">D</span>
+      <span class="brand-d-shimmer"></span>
+    </div>
+    <div class="brand-meta-info">
+      <span class="brand-name">Deepa</span>
+      <span class="brand-sub">Milestone 21 &bull; 14 Nov</span>
+    </div>
+  </div>
+
+  <!-- Sound Toggle & Controls Bar (Top-Right) -->
+  <div class="audio-panel">
+    <div class="music-dropdown-wrap">
+      <button id="music-btn" class="glass-pill-btn" title="Play Romantic Song with Vocals">
+        <span class="btn-icon">🎵</span>
+        <span class="btn-label" id="music-btn-label">Play Song</span>
+      </button>
+      <select id="song-select" class="glass-select" title="Choose Romantic Indian Song">
+        <option value="tum_hi_ho.mp3">🌹 Tum Hi Ho (Aashiqui 2 - Arijit Singh)</option>
+        <option value="kesariya.mp3">💖 Kesariya (Brahmastra - Arijit Singh)</option>
+        <option value="raataan_lambiyan.mp3">🌙 Raataan Lambiyan (Shershaah - Jubin & Asees)</option>
+        <option value="heeriye.mp3">✨ Heeriye (Jasleen Royal & Arijit Singh)</option>
+        <option value="apna_bana_le.mp3">💫 Apna Bana Le (Bhediya - Arijit Singh)</option>
+        <option value="maiyya_mainu.mp3">🕊️ Maiyya Mainu (Jersey - Sachet Tandon)</option>
+        <option value="meri_zindagi_hai_tu.mp3">👑 Meri Zindagi Hai Tu (Jubin & Neeti)</option>
+        <option value="chahun_main_ya_naa.mp3">🌸 Chahun Main Ya Naa (Arijit & Palak)</option>
+      </select>
+      <button id="next-song-btn" class="glass-pill-btn icon-only" title="Next Song (Shuffle)">
+        <span>⏭️</span>
+      </button>
+    </div>
+    <button id="fireworks-btn" class="glass-pill-btn" title="Launch Crackers & Fireworks">
+      <span class="btn-icon">🎆</span>
+      <span class="btn-label">Crackers</span>
+    </button>
+  </div>
+
+  <!-- Background Music Player with Real Studio Vocals & Dynamic Auto-Shuffle -->
+  <audio id="local-audio-player" preload="auto"></audio>
+
+  <!-- ============================================== -->
+  <!-- 1. ENCHANTED OPENING CURTAIN / INTRO GATEWAY   -->
+  <!-- ============================================== -->
+  <div id="intro-curtain" class="intro-curtain">
+    <div class="sparkle-cluster"></div>
+    <div class="intro-card glass-card">
+      <div class="glow-orb"></div>
+
+      <!-- ANIMATED ROYAL LOGO OF "D" (MEDALLION CREST) -->
+      <div class="royal-d-insignia" id="intro-royal-logo" title="Royal Monogram of Deepa">
+        <div class="insignia-aura-glow"></div>
+        <div class="insignia-orbit-track">
+          <span class="orbit-sparkle s1">✦</span>
+          <span class="orbit-sparkle s2">✨</span>
+          <span class="orbit-sparkle s3">✦</span>
+          <span class="orbit-sparkle s4">⭐</span>
+        </div>
+        <div class="insignia-medallion">
+          <div class="insignia-crown">
+            <span class="crown-gem g1"></span>
+            <span class="crown-gem g2"></span>
+            <span class="crown-gem g3"></span>
+            <span class="crown-symbol">👑</span>
+          </div>
+          <div class="insignia-letter-body">
+            <span class="insignia-letter">D</span>
+            <span class="insignia-shimmer-sweep"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="crown-badge">✦ For Deepa &bull; With All My Devotion from Nikhil ✦</div>
+      <h2 class="sub-greeting">A Celebration of Grace, Light & Love</h2>
+      <h1 class="girl-name cursive-text">Deepa</h1>
+      <p class="intro-subtext">Born on November 14, 2005 &bull; The Day The Stars Shined Brightest</p>
+      
+      <div class="envelope-box" id="envelope-trigger">
+        <div class="envelope-glow"></div>
+        <div class="envelope-envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal">
+            <span class="seal-monogram">D &bull; N</span>
+          </div>
+        </div>
+        <p class="click-hint">✦ Tap the royal seal to open your surprise ✦</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MAIN EXPERIENCE CONTAINER                      -->
+  <!-- ============================================== -->
+  <main id="main-content" class="main-content hidden">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="floating-badge">✨ 14 November 2005 &bull; My Soulmate &bull; My Humsafar ✨</div>
+      <h1 class="hero-title">Happy Birthday, <span class="gradient-text cursive-text">Deepa</span></h1>
+      <p class="hero-subtitle">
+        To the woman who brings peace to my world and purpose to my days. Celebrating your grace, your strength, and the beautiful soul you are.
+      </p>
+
+      <!-- LIVE LIFETIME MAGIC COUNTER -->
+      <div class="time-counter-wrapper glass-card">
+        <h3 class="counter-header">✨ Your Journey of Grace & Light ✨</h3>
+        <p class="counter-subheader">Deepa has been gracing this world with her warmth for:</p>
+        <div class="time-grid" id="lifetime-counter">
+          <div class="time-box">
+            <span class="time-val" id="days-count">0</span>
+            <span class="time-lbl">Days</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="hours-count">0</span>
+            <span class="time-lbl">Hours</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="mins-count">0</span>
+            <span class="time-lbl">Minutes</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="secs-count">0</span>
+            <span class="time-lbl">Seconds</span>
+          </div>
+        </div>
+        <div class="milestone-badge">
+          <span>💖 Over 7,600+ Days of Grace, Beauty & Soulful Companionship 💖</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 2. INTERACTIVE CAKE & CANDLE BLOWING           -->
+    <!-- ============================================== -->
+    <section class="cake-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">🎂 Make A Sacred Wish</div>
+        <h2 class="section-title">The Royal Birthday Cake</h2>
+        <p class="section-desc">Close your eyes, make the deepest wish in your heart, and tap the candles to blow them out!</p>
+      </div>
+
+      <div class="cake-container" id="cake-interactive">
+        <div class="cake-stage">
+          <!-- Sparkles & Aura -->
+          <div class="cake-aura"></div>
+
+          <!-- Number 21 / Candles -->
+          <div class="candle-wrapper" id="candle-bundle">
+            <div class="candle candle-1">
+              <div class="flame" id="flame-1"></div>
+              <div class="wick"></div>
+              <div class="wax"></div>
+            </div>
+            <div class="candle candle-2">
+              <div class="flame" id="flame-2"></div>
+              <div class="wick"></div>
+              <div class="wax"></div>
+            </div>
+            <div class="candle candle-3">
+              <div class="flame" id="flame-3"></div>
+              <div class="wick"></div>
+              <div class="wax"></div>
+            </div>
+          </div>
+
+          <!-- Cake Layers -->
+          <div class="cake-body">
+            <div class="cake-top-tier">
+              <span class="cake-badge-text" id="cake-text">Deepa &bull; My Forever</span>
+            </div>
+            <div class="cake-middle-tier">
+              <div class="gold-pearls-row">
+                <span class="cake-pearl">✦</span>
+                <span class="cake-pearl">✦</span>
+                <span class="cake-pearl">✦</span>
+                <span class="cake-pearl">✦</span>
+                <span class="cake-pearl">✦</span>
+              </div>
+            </div>
+            <div class="cake-bottom-tier">
+              <div class="cake-cream-ribbon"></div>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <div class="cake-action-bar">
+          <button id="blow-candles-btn" class="magical-cta-btn">
+            <span class="btn-glow"></span>
+            <span class="btn-content">💨 Tap Here to Blow Out Candles & Make a Wish!</span>
+          </button>
+          <div id="wish-banner" class="wish-banner hidden">
+            <span class="banner-icon">🎉✨</span>
+            <p class="banner-title">Happy Birthday, Dearest Deepa!</p>
+            <p class="banner-subtitle">Your wish has ascended to the stars! May every prayer of your heart and every dream you hold come true with peace and joy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 3. OUR SACRED STORY: TOGETHER SINCE 28 MAY 2021 -->
+    <!-- ============================================== -->
+    <section class="story-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">💍 28 May 2021 &bull; The Day Forever Began</div>
+        <h2 class="section-title">Our Journey: 5+ Years of Devotion</h2>
+        <p class="section-desc">From 28 May 2021 to this milestone 21st birthday and every lifetime ahead — growing together, holding hands through every season.</p>
+      </div>
+
+      <!-- Live Together Love Counter -->
+      <div class="time-counter-wrapper glass-card story-counter-wrapper">
+        <h3 class="counter-header">✨ Our Sacred Journey Together ✨</h3>
+        <p class="counter-subheader">Deepa and Nikhil have been walking hand in hand for:</p>
+        <div class="time-grid" id="together-counter">
+          <div class="time-box">
+            <span class="time-val" id="together-days">0</span>
+            <span class="time-lbl">Days of Love</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="together-hours">0</span>
+            <span class="time-lbl">Hours</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="together-mins">0</span>
+            <span class="time-lbl">Minutes</span>
+          </div>
+          <div class="time-box">
+            <span class="time-val" id="together-secs">0</span>
+            <span class="time-lbl">Seconds</span>
+          </div>
+        </div>
+        <div class="milestone-badge">
+          <span>💖 Over 1,970+ Days of Growth, Shared Dreams, and Unshakable Devotion 💖</span>
+        </div>
+      </div>
+
+      <!-- The 7 Lifelong Promises to Deepa -->
+      <div class="vows-container">
+        <h3 class="vows-header-text">Nikhil's 7 Eternal Promises to Deepa</h3>
+        <div class="vows-grid">
+          <div class="vow-card">
+            <span class="vow-num">Promise I</span>
+            <h4 class="vow-title">A Sanctuary of Peace</h4>
+            <p class="vow-text">In a noisy world, I promise to always be your safe harbor where you never have to pretend, where you are always free and safe to be yourself.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise II</span>
+            <h4 class="vow-title">Deep Respect & Equality</h4>
+            <p class="vow-text">I promise to always honor your opinions, respect your choices, and cherish the remarkable, intelligent, and dignified woman you are.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise III</span>
+            <h4 class="vow-title">Fierce Loyalty</h4>
+            <p class="vow-text">Through sunshine and stormy weather, through easy days and heavy nights, I will stand firmly beside you, holding your hand through it all.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise IV</span>
+            <h4 class="vow-title">Your Biggest Believer</h4>
+            <p class="vow-text">I promise to believe in your potential and celebrate your achievements, cheering for your dreams even when the world doubts or you doubt yourself.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise V</span>
+            <h4 class="vow-title">Gentle Patience</h4>
+            <p class="vow-text">I promise to listen with an open heart, to resolve any difference with tender respect, and never let pride stand in the way of our sacred bond.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise VI</span>
+            <h4 class="vow-title">Protecting Your Joy</h4>
+            <p class="vow-text">I promise to bring a smile to your face on hard days, to laugh with you until our bellies ache, and to keep the romance in our hearts alive forever.</p>
+          </div>
+
+          <div class="vow-card">
+            <span class="vow-num">Promise VII</span>
+            <h4 class="vow-title">Choosing You Every Day</h4>
+            <p class="vow-text">Loving you is my conscious, lifelong commitment. I promise to choose you, cherish you, and walk beside you for all of our days.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lifetime Downloadable Keepsake Certificate -->
+      <div class="certificate-preview-card glass-card">
+        <div class="cert-corner cert-tl"></div>
+        <div class="cert-corner cert-tr"></div>
+        <div class="cert-corner cert-bl"></div>
+        <div class="cert-corner cert-br"></div>
+
+        <div class="cert-badge">👑 OFFICIAL TESTAMENT OF DEVOTION 👑</div>
+        <h3 class="cert-title">Certificate of Eternal Love</h3>
+        <p class="cert-subtitle">A Lifetime Keepsake &bull; Commemorating Deepa's 21st Birthday Milestone</p>
+
+        <div class="cert-recipients">
+          <span class="cert-name cursive-text">Deepa</span>
+          <span class="cert-amp">&amp;</span>
+          <span class="cert-name cursive-text">Nikhil</span>
+        </div>
+
+        <p class="cert-pledge">
+          "United in love since <strong>28 May 2021</strong>. Through 5+ unforgettable years, over 1,970 days of mutual respect, companionship, and shared dreams, this bond stands unbreakable and sacred for all lifetimes ahead."
+        </p>
+
+        <div class="cert-footer-meta">
+          <span class="cert-date-text">EST. 28 MAY 2021 &bull; FOREVER AND ALWAYS</span>
+          <button id="download-cert-btn" class="download-cert-btn">
+            <span>📥 Download Forever Keepsake (Save to Phone / Print)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 4. OUR 5-YEAR LOVE JOURNEY (2021 - 2026)       -->
+    <!-- ============================================== -->
+    <section class="timeline-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">✨ 5 Years of Unconditional Devotion</div>
+        <h2 class="section-title">The Story of Us: Our 5-Year Journey</h2>
+        <p class="section-desc">From May 28, 2021 to your 21st Birthday Milestone &bull; Over 1,970 days of mutual trust, peace, and love</p>
+      </div>
+
+      <div class="love-timeline">
+        <div class="timeline-line"></div>
+
+        <!-- 2021 -->
+        <div class="timeline-item">
+          <div class="timeline-dot">🌹</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">28 MAY 2021 &bull; THE SACRED BEGINNING</span>
+            <h3 class="timeline-title">The Day My Life Gained Its Truest Purpose</h3>
+            <p class="timeline-text">
+              The moment our story officially began. I still remember the exact feeling in my chest—knowing that you weren't just someone special, but the one soul my heart had been quietly searching for. You brought light into every corner of my world.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="timeline-item">
+          <div class="timeline-dot">💖</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">YEAR 1 &bull; 2022</span>
+            <h3 class="timeline-title">Learning the Quiet Beauty of Your Heart</h3>
+            <p class="timeline-text">
+              Endless conversations under the stars, discovering your gentle humor, your quiet strength, and your genuine warmth. In you, I didn't just find love—I found my closest confidante, my best friend, and my greatest comfort.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item">
+          <div class="timeline-dot">🛡️</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">YEAR 2 &bull; 2023</span>
+            <h3 class="timeline-title">Becoming Each Other's Sanctuary</h3>
+            <p class="timeline-text">
+              Whenever the world outside felt overwhelming or noisy, being beside you was my peace. Holding your hand reminded me that through every high and low, our bond was anchored in unconditional respect and mutual loyalty.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024 - 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot">👑</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">YEAR 3 & 4 &bull; 2024 &ndash; 2025</span>
+            <h3 class="timeline-title">Over 1,970 Days of Deep Devotion</h3>
+            <p class="timeline-text">
+              Watching you grow into the intelligent, poised, and dignified woman you are today has been the greatest privilege of my life. Loving you became not just a feeling, but my conscious, daily promise to protect your joy and cherish your heart.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2026 (Today) -->
+        <div class="timeline-item highlight-timeline">
+          <div class="timeline-dot gold-glow">🌟</div>
+          <div class="timeline-card glass-card gold-border">
+            <span class="timeline-date">14 NOVEMBER &bull; DEEPA'S 21ST BIRTHDAY</span>
+            <h3 class="timeline-title">Celebrating 21 Years of Grace, Light & Love</h3>
+            <p class="timeline-text">
+              Today you turn 21—a golden milestone of elegance, maturity, and dreams fulfilled. 5 unforgettable years of our love behind us, and an entire lifetime of devotion ahead. Happy 21st Birthday, Deepa. You are my forever.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 5. 21 GOLDEN REASONS FOR 21 YEARS              -->
+    <!-- ============================================== -->
+    <section class="reasons-21-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">💎 Deepa's 21st Milestone</div>
+        <h2 class="section-title">21 Reasons Why My Whole Heart Belongs to You</h2>
+        <p class="section-desc">One soulful, honest reason for every single year of your remarkable life &bull; Tap any card to reveal</p>
+      </div>
+
+      <div class="reasons-21-controls">
+        <button id="reveal-all-reasons-btn" class="glass-pill-btn">✨ Open All 21 Golden Reasons</button>
+      </div>
+
+      <div class="reasons-21-grid" id="reasons-21-container">
+        <!-- Injected dynamically by script.js with 21 golden milestone cards -->
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 6. THE SECRET BIRTHDAY WISHING LANTERN         -->
+    <!-- ============================================== -->
+    <section class="wishing-lantern-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">🏮 A Sacred Birthday Wish</div>
+        <h2 class="section-title">Deepa's Secret Wish Lantern</h2>
+        <p class="section-desc">Close your eyes, make a private prayer or dream for your 21st year, and send it into the starlit sky</p>
+      </div>
+
+      <div class="lantern-box glass-card" id="lantern-card-stage">
+        <div class="lantern-3d-stage" id="lantern-stage">
+          <div class="lantern-glow-orb"></div>
+          <div class="lantern-sky-backdrop" id="lantern-sky-backdrop"></div>
+          <div class="floating-sky-lantern-3d" id="sky-lantern-graphic" title="Deepa's Sacred Wish Lantern">
+            <div class="lantern-3d-crown"></div>
+            <div class="lantern-3d-body">
+              <div class="lantern-silk-rib rib-1"></div>
+              <div class="lantern-silk-rib rib-2"></div>
+              <div class="lantern-silk-rib rib-3"></div>
+              <div class="lantern-monogram-glow">D &bull; N</div>
+              <div class="lantern-flame-core">
+                <div class="lantern-flame-fire"></div>
+              </div>
+            </div>
+            <div class="lantern-3d-base"></div>
+            <div class="lantern-warm-shadow"></div>
+          </div>
+        </div>
+
+        <div class="lantern-form" id="lantern-input-area">
+          <label for="deepa-wish-input" class="lantern-label">What does Deepa's heart pray for on her 21st Birthday?</label>
+          <textarea id="deepa-wish-input" class="glass-textarea" rows="3" placeholder="Type your secret birthday dream or prayer here... (This stays between you and the stars ✨)"></textarea>
+          <button id="send-lantern-btn" class="magical-cta-btn highlight-btn">
+            <span class="btn-glow"></span>
+            <span class="btn-content">🏮 Release Lantern to the Universe ✨</span>
+          </button>
+        </div>
+
+        <div id="wish-sealed-display" class="wish-sealed-display hidden">
+          <div class="sealed-star-cluster">✨ ⭐ 💖 ⭐ ✨</div>
+          <h3 class="sealed-heading">Your Wish Is Sacred & Sealed in the Stars</h3>
+          <blockquote class="sealed-quote" id="sealed-wish-text"></blockquote>
+          <p class="sealed-note">
+            "Deepa, whatever your prayers and aspirations are for this milestone year and beyond, Nikhil promises to stand firmly beside you, to believe in you, and to give his whole heart to help you make every dream a reality."
+          </p>
+          <div class="sealed-signature">&bull; With Eternal Devotion &bull; Nikhil &bull;</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 7. WRITTEN IN THE STARS (SCORPIO CONSTELLATION)-->
+    <!-- ============================================== -->
+    <section class="zodiac-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">♏ Celestial Alignment</div>
+        <h2 class="section-title">Written In The Stars: Deepa, My Humsafar</h2>
+        <p class="section-desc">Born November 14, 2005 &bull; A soul of profound depth, quiet elegance, and unwavering loyalty</p>
+      </div>
+
+      <div class="constellation-grid">
+        <div class="star-trait-card glass-card">
+          <div class="trait-icon">✨</div>
+          <h3>Luminous Warmth</h3>
+          <p>Your smile carries an effortless serenity that grounds my heart and brings calm to every storm.</p>
+        </div>
+        <div class="star-trait-card glass-card">
+          <div class="trait-icon">💎</div>
+          <h3>Unwavering Loyalty & Integrity</h3>
+          <p>Deep, genuine, and protective. When you love, you love with your entire soul and quiet strength.</p>
+        </div>
+        <div class="star-trait-card glass-card">
+          <div class="trait-icon">🌸</div>
+          <h3>Timeless Grace</h3>
+          <p>A rare combination of intelligence, magnetic elegance, and a gentle spirit that commands respect.</p>
+        </div>
+        <div class="star-trait-card glass-card">
+          <div class="trait-icon">🌟</div>
+          <h3>Golden Ambition</h3>
+          <p>Quiet determination and inner resilience. Destined to achieve every dream and milestone you set out to reach.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 4. MEMORY LANE & POLAROID GALLERY              -->
+    <!-- ============================================== -->
+    <section class="gallery-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">📸 Precious Moments</div>
+        <h2 class="section-title">Cherished Moments with Deepa</h2>
+        <p class="section-desc">Reflections of your beauty, your quiet grace, and the laughter that brightens every day.</p>
+      </div>
+
+      <div class="polaroid-grid" id="polaroid-container">
+        <!-- Polaroid 1 -->
+        <div class="polaroid-card" data-index="1">
+          <div class="polaroid-tape"></div>
+          <div class="photo-frame">
+            <img src="assets/deepa_1.jpg?v=2.8" alt="Deepa Radiant Smile" class="polaroid-img" id="img-1">
+          </div>
+          <div class="polaroid-caption">
+            <h4 class="caption-title">That Radiant Smile</h4>
+            <p class="caption-desc">A smile that brings calm to every storm and warms my whole heart.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid 2 -->
+        <div class="polaroid-card" data-index="2">
+          <div class="polaroid-tape"></div>
+          <div class="photo-frame">
+            <img src="assets/deepa_2.jpg?v=2.8" alt="Deepa Elegance" class="polaroid-img" id="img-2">
+          </div>
+          <div class="polaroid-caption">
+            <h4 class="caption-title">Quiet Grace & Poise</h4>
+            <p class="caption-desc">Carrying yourself with rare elegance, dignity, and a gentle heart.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid 3 -->
+        <div class="polaroid-card" data-index="3">
+          <div class="polaroid-tape"></div>
+          <div class="photo-frame">
+            <img src="assets/deepa_3.jpg" alt="Deepa Tender Heart" class="polaroid-img" id="img-3">
+          </div>
+          <div class="polaroid-caption">
+            <h4 class="caption-title">Pure & Tender Heart</h4>
+            <p class="caption-desc">The gentle warmth and boundless kindness you show to those you love.</p>
+          </div>
+        </div>
+
+        <!-- Polaroid 4 -->
+        <div class="polaroid-card" data-index="4">
+          <div class="polaroid-tape"></div>
+          <div class="photo-frame">
+            <img src="assets/deepa_4.jpg" alt="Deepa with Dog" class="polaroid-img" id="img-4">
+          </div>
+          <div class="polaroid-caption">
+            <h4 class="caption-title">Unfiltered Joy & Laughter</h4>
+            <p class="caption-desc">Your contagious happiness and playful spirit that make every moment magical.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 5. THE ENCHANTED WISH JAR                      -->
+    <!-- ============================================== -->
+    <section class="wishjar-section section-padding">
+      <div class="section-header">
+        <div class="section-badge">💫 Magic Jar</div>
+        <h2 class="section-title">The Jar of Endless Love & Appreciation</h2>
+        <p class="section-desc">Pick a glowing star from the jar whenever you want a sweet reminder of why you are cherished!</p>
+      </div>
+
+      <div class="jar-interactive-wrap">
+        <div class="glowing-jar" id="jar-trigger">
+          <div class="jar-lid"></div>
+          <div class="jar-glass">
+            <div class="jar-ribbon">💖 My Constant</div>
+            <div class="floating-jar-stars">
+              <span class="j-star s1">✨</span>
+              <span class="j-star s2">⭐</span>
+              <span class="j-star s3">💖</span>
+              <span class="j-star s4">✨</span>
+              <span class="j-star s5">🌟</span>
+            </div>
+          </div>
+          <div class="jar-stand"></div>
+        </div>
+
+        <div class="jar-content-display glass-card" id="reason-card">
+          <div class="reason-tag">A Note for Deepa #<span id="reason-num">1</span></div>
+          <p class="reason-text" id="reason-text">"Your presence brings a quiet peace into my life that nothing in this world could ever replace."</p>
+          <button id="next-reason-btn" class="glass-pill-btn active-pill">
+            <span>✨ Tap to Draw Another Note</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 6. IN MY OWN VOICE: PERSONAL BIRTHDAY NOTE     -->
+    <!-- ============================================== -->
+    <section class="voice-note-section section-padding" id="voice-note-section">
+      <div class="section-header">
+        <div class="section-badge">🎙️ From Nikhil's Heart &bull; Special Dedication</div>
+        <h2 class="section-title">A Voice Message for Deepa</h2>
+        <p class="section-desc">Some feelings are too sacred for ink alone &bull; Put on your earphones, close your eyes, and listen</p>
+      </div>
+
+      <div class="voice-card-container">
+        <div class="voice-card glass-card">
+          <!-- Ambient Heartbeat Glow -->
+          <div class="voice-heartbeat-glow" id="voice-heartbeat-glow"></div>
+
+          <!-- Top Meta Bar -->
+          <div class="voice-card-header">
+            <div class="voice-avatar-wrap">
+              <div class="voice-avatar-ring"></div>
+              <span class="voice-avatar-icon">🎙️</span>
+            </div>
+            <div class="voice-meta-info">
+              <h3 class="voice-player-title">Nikhil&rsquo;s Voice Note for Deepa</h3>
+              <p class="voice-player-subtitle">Special 21st Birthday Milestone Recording &bull; To My Humsafar</p>
+            </div>
+            <div class="voice-live-badge">
+              <span class="voice-pulse-dot" id="voice-pulse-dot"></span>
+              <span class="voice-status-text" id="voice-status-text">Ready to Play</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Audio Waveform Visualizer -->
+          <div class="voice-waveform-container" id="voice-waveform-container" title="Click anywhere on the waveform to seek">
+            <div class="voice-waveform-track" id="voice-waveform-track">
+              <!-- 48 dynamic animated soundwave bars generated by JS -->
+            </div>
+            <div class="voice-waveform-cursor" id="voice-waveform-cursor"></div>
+          </div>
+
+          <!-- Playback Controls -->
+          <div class="voice-controls-bar">
+            <button class="voice-play-circle-btn" id="voice-play-circle-btn" title="Play Nikhil's Voice Message">
+              <span class="voice-play-halo"></span>
+              <span class="voice-play-symbol" id="voice-play-symbol">▶</span>
+            </button>
+
+            <div class="voice-time-pill">
+              <span class="voice-time-elapsed" id="voice-time-elapsed">0:00</span>
+              <span class="voice-time-slash">/</span>
+              <span class="voice-time-total" id="voice-time-total">--:--</span>
+            </div>
+
+            <div class="voice-speed-wrap">
+              <button class="voice-speed-btn" id="voice-speed-btn" title="Toggle Speed">1.0x</button>
+            </div>
+          </div>
+
+          <!-- Heart-Touching Whisper Quote -->
+          <div class="voice-whisper-quote">
+            <p id="voice-whisper-text">
+              &ldquo;No matter how many miles, no matter how many years &bull; my heart will always speak your name.&rdquo;
+            </p>
+          </div>
+
+          <!-- Dedicated Voice Audio Element -->
+          <audio id="voice-note-audio-element" src="voice_note.mp3" preload="metadata"></audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 7. THE HEARTFELT BIRTHDAY LOVE LETTER          -->
+    <!-- ============================================== -->
+    <section class="letter-section section-padding" id="letter-section">
+      <div class="section-header">
+        <div class="section-badge">💌 From The Heart &bull; For Deepa</div>
+        <h2 class="section-title">A Letter for Deepa</h2>
+        <p class="section-desc">Words written with deepest respect, admiration, and unconditional love &bull; Tap the seal to unroll</p>
+      </div>
+
+      <div class="scroll-letter-stage" id="scroll-stage">
+        
+        <!-- 1. THE CLOSED ROLLED 3D SCROLL -->
+        <div class="rolled-scroll-box" id="rolled-scroll-box" title="Tap to unroll Nikhil's letter for Deepa">
+          <div class="scroll-aura-glow"></div>
+          <div class="scroll-3d-cylinder">
+            <!-- Left Spindle Knob -->
+            <div class="scroll-knob knob-left">
+              <div class="knob-gold-ring"></div>
+            </div>
+            <!-- Rolled Parchment Cylinder Body -->
+            <div class="scroll-cylinder-body">
+              <div class="scroll-paper-curl-top"></div>
+              <div class="scroll-ribbon-band"></div>
+              <!-- Royal 3D Wax Seal Button -->
+              <div class="scroll-wax-seal" id="scroll-seal-trigger">
+                <div class="seal-glow-halo"></div>
+                <div class="seal-inner-face">
+                  <span class="seal-crown-symbol">👑</span>
+                  <span class="seal-monogram-label">D &bull; N</span>
+                </div>
+              </div>
+              <div class="scroll-paper-curl-bottom"></div>
+            </div>
+            <!-- Right Spindle Knob -->
+            <div class="scroll-knob knob-right">
+              <div class="knob-gold-ring"></div>
+            </div>
+          </div>
+          <p class="scroll-tap-prompt">✦ Tap the Royal Wax Seal to Unroll Nikhil&rsquo;s Letter ✦</p>
+        </div>
+
+        <!-- 2. THE UNROLLED PARCHMENT LETTER (Physical Rolling Unroll Animation) -->
+        <div class="unrolled-letter-wrapper hidden" id="unrolled-letter-wrapper">
+          <!-- Top Wooden Spindle Bar (Stationary Anchor) -->
+          <div class="scroll-spindle spindle-top">
+            <div class="knob-cap knob-left"></div>
+            <div class="spindle-bar"></div>
+            <div class="knob-cap knob-right"></div>
+          </div>
+
+          <!-- Rolling Unroll Viewport (dynamically expands downwards as scroll rolls open) -->
+          <div class="parchment-unroll-viewport" id="parchment-unroll-viewport">
+            <div class="unrolling-curl-shadow"></div>
+
+            <!-- Parchment Paper Canvas with Burnt Kraft Texture & Cursive Ink -->
+            <div class="parchment-paper" id="parchment-paper">
+              <div class="letter-stamp">👑</div>
+              <div class="letter-header">
+                <h3 class="letter-greeting">My Dearest Deepa,</h3>
+                <span class="letter-date">14th November &bull; Scorpio Constellation</span>
+              </div>
+              <div class="letter-body" id="letter-content">
+                <p>
+                  On November 14, 2005, this world was gifted a soul of rare warmth and gentle strength: <strong>You</strong>.
+                </p>
+                <p>
+                  Loving you has shown me the quiet beauty of real companionship. In a world full of noise, you are my sanctuary, my calm, and my greatest comfort. Thank you for your unwavering grace, your understanding, and the genuine respect and tenderness you bring into our lives.
+                </p>
+                <p>
+                  As you step into this milestone year, my deepest prayer is for your peace, your fulfillment, and your happiness in everything you pursue. No matter where life leads, know that you will always have my loyalty, my respect, and my whole heart.
+                </p>
+                <p>
+                  May your days be filled with quiet joy, profound accomplishments, good health, and peace of mind. Happy Birthday, Deepa. You are cherished beyond measure.
+                </p>
+                <p class="letter-sign-off">
+                  Forever and always,<br>
+                  <span class="cursive-sign">With all my devotion & love, ❤️ Nikhil</span>
+                </p>
+              </div>
+
+              <!-- Re-roll Button -->
+              <div class="letter-footer-controls">
+                <button class="glass-pill-btn reroll-scroll-btn" id="reroll-scroll-btn" title="Roll scroll back up">
+                  <span>📜 Tap to Roll Letter Back Up</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Wooden Spindle Bar (The Moving Roller that rolls down the paper!) -->
+          <div class="scroll-spindle spindle-bottom" id="spindle-bottom">
+            <div class="knob-cap knob-left"></div>
+            <div class="spindle-bar rolling-bar"></div>
+            <div class="knob-cap knob-right"></div>
+            <div class="spindle-roll-cylinder"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 7. THE GRAND FINALE SURPRISE                   -->
+    <!-- ============================================== -->
+    <section class="finale-section section-padding">
+      <div class="finale-card glass-card">
+        <div class="sparkle-aura"></div>
+        <h2 class="finale-title cursive-text">May All Your Prayers & Dreams Be Fulfilled</h2>
+        <p class="finale-desc">You deserve a life filled with dignity, peace, and boundless happiness. Happy Birthday, Deepa.</p>
+        
+        <div class="finale-button-cluster">
+          <button id="floating-balloons-btn" class="glass-pill-btn large-pill">
+            🎈 Release Romantic Love Balloons
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p class="footer-main">Handcrafted with deepest love & devotion by <strong>Nikhil</strong> for <strong>Deepa</strong> 💖 &bull; Born 14 November 2005</p>
+      <p class="footer-small">✨ May your light forever shine with grace and peace ✨</p>
+    </footer>
+
+  </main>
+
+  <!-- Audio Context / Real Vocals / Synthesizer Script -->
+  <script src="script.js?v=2.8"></script>
+</body>
+</html>
