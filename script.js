@@ -1739,7 +1739,7 @@
   initAnimatedFavicon();
 
   // Sweet Romantic Tab Title Presence
-  const MAIN_TAB_TITLE = 'Happy Birthday, Deepa 👑 My Humsafar';
+  const MAIN_TAB_TITLE = '👑 Chapter 21: Deepa 📖';
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       document.title = 'Deepa, come back soon... 🌸';
