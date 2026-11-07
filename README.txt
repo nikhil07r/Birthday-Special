@@ -59,7 +59,7 @@ When a song ends, it seamlessly shuffles to another song without repetition.
 2. Live Lifetime Magic Counter (Days, Hours, Minutes, Seconds)
 3. 21st Birthday Milestone Cake with 21 flickering candles
    - Tapping "Blow Out All Candles" blows out all flames with realistic smoke, plays champagne cork pops + ascending harp, and cascades golden sparklers & champagne stardust DOWN FROM THE TOP of the screen!
-4. "The Story of Us" — 5-Year Love Journey Timeline (28 May 2021 to 21st Birthday)
+4. "The Story of Us" — 5-Year Love Journey Timeline (28 April 2021 to 21st Birthday)
 5. 21 Golden Reasons Why My Whole Heart Belongs to Deepa
 6. Handcrafted 3D Wishing Lantern Festival:
    - Deepa types her sacred prayer for her 21st year.

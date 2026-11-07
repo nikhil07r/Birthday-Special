@@ -10,8 +10,8 @@
   // Deepa's birth date: November 14, 2005 00:00:00
   const BIRTH_DATE = new Date(2005, 10, 14, 0, 0, 0); // Month is 0-indexed (10 = Nov)
 
-  // Relationship start date: 28 May 2021 00:00:00
-  const TOGETHER_DATE = new Date(2021, 4, 28, 0, 0, 0); // Month is 0-indexed (4 = May)
+  // Relationship start date: 28 April 2021 00:00:00
+  const TOGETHER_DATE = new Date(2021, 3, 28, 0, 0, 0); // Month is 0-indexed (3 = April)
 
   // Thoughtful, mature, and deeply respectful notes for the Wish Jar
   const MATURE_LOVE_NOTES = [
@@ -401,7 +401,7 @@
   setInterval(updateLifetimeCounter, 1000);
   updateLifetimeCounter();
 
-  // Live Together Love Counter (Since 28 May 2021)
+  // Live Together Love Counter (Since 28 April 2021)
   function updateTogetherCounter() {
     const now = new Date();
     const diffMs = now - TOGETHER_DATE;
@@ -513,14 +513,14 @@
 
     ctx.font = 'bold 18px sans-serif';
     ctx.fillStyle = '#d4af37';
-    ctx.fillText('TOGETHER SINCE 28 MAY 2021', 600, 370);
+    ctx.fillText('TOGETHER SINCE 28 APRIL 2021', 600, 370);
 
     // 7. Sacred Pledge Text
     ctx.font = 'italic 19px Georgia, serif';
     ctx.fillStyle = '#f3efe6';
     const lines = [
-      '"This sacred testament honors over 1,970+ days of unwavering companionship, mutual respect,',
-      'and quiet strength. From 28 May 2021 through every season of life ahead,',
+      '"This sacred testament honors over 2,000+ days of unwavering companionship, mutual respect,',
+      'and quiet strength. From 28 April 2021 through every season of life ahead,',
       'my promise remains true: to always protect your peace, believe in your dreams,',
       'and cherish your heart for all of our days."'
     ];
@@ -543,7 +543,7 @@
     ctx.font = 'bold 11px sans-serif';
     ctx.fillStyle = '#d4af37';
     ctx.fillText('SEALED WITH ALL MY HEART', 600, 665);
-    ctx.fillText('EST. 28 MAY 2021 • FOREVER AND ALWAYS', 600, 683);
+    ctx.fillText('EST. 28 APRIL 2021 • FOREVER AND ALWAYS', 600, 683);
 
     // Signatures
     ctx.font = '28px cursive, Georgia';
@@ -1737,6 +1737,16 @@
   }
 
   initAnimatedFavicon();
+
+  // Sweet Romantic Tab Title Presence
+  const MAIN_TAB_TITLE = 'Happy Birthday, Deepa 👑 My Humsafar';
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      document.title = 'Deepa, come back soon... 🌸';
+    } else {
+      document.title = MAIN_TAB_TITLE;
+    }
+  });
 
   // Interactive Royal "D" Logo & Brand Pill Handlers
   const introRoyalLogo = document.getElementById('intro-royal-logo');
