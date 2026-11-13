@@ -2168,6 +2168,116 @@ body {
   color: var(--text-ivory);
 }
 
+/* Creator Contact / Inquiries Card in Footer */
+.creator-contact-card {
+  margin: 32px auto 10px;
+  max-width: 580px;
+  padding: 24px 22px;
+  background: rgba(22, 14, 30, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 0 15px rgba(212, 175, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creator-contact-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 14px 36px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.12);
+}
+
+.creator-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  color: var(--accent-gold);
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.creator-tagline {
+  color: #e2d9eb;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  max-width: 480px;
+}
+
+.creator-mail-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  margin-top: 4px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(155, 45, 90, 0.28));
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 30px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.creator-mail-pill:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.38), rgba(185, 55, 110, 0.42));
+  border-color: var(--accent-gold);
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  color: #ffffff !important;
+}
+
+.creator-mail-pill .mail-icon {
+  font-size: 1.1rem;
+}
+
+.creator-mail-pill .mail-address {
+  color: var(--accent-gold);
+  font-family: monospace, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.creator-mail-pill .mail-action {
+  color: #f1e6f5;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .creator-contact-card {
+    margin: 24px 10px 10px;
+    padding: 18px 14px;
+  }
+  .creator-tagline {
+    font-size: 0.88rem;
+  }
+  .creator-mail-pill {
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  .creator-mail-pill .mail-action {
+    font-size: 0.82rem;
+  }
+}
+
 .glass-input, .glass-textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.06);
