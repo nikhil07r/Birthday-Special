@@ -564,16 +564,24 @@
     ctx.lineTo(400, 680);
     ctx.stroke();
 
-    // Trigger download
-    const link = document.createElement('a');
-    link.download = 'Deepa_and_Nikhil_Lifetime_Keepsake.png';
-    link.href = c.toDataURL('image/png');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Celebratory fireworks burst & celestial chimes (Zero file downloads)
+    triggerConfettiBurst(window.innerWidth / 2, window.innerHeight * 0.4);
+    triggerSparklersRainFromTop(60);
 
-    // Celebratory fireworks burst
-    triggerConfettiBurst(window.innerWidth / 2, window.innerHeight / 2);
+    const certCard = document.querySelector('.certificate-preview-card');
+    if (certCard) {
+      certCard.style.boxShadow = '0 0 50px rgba(212, 175, 55, 0.9), 0 0 100px rgba(185, 28, 62, 0.6)';
+      setTimeout(() => {
+        certCard.style.boxShadow = '';
+      }, 3500);
+    }
+
+    if (downloadCertBtn) {
+      downloadCertBtn.innerHTML = '<span>💖 Sealed in Eternal Starlight & Love 💖</span>';
+      setTimeout(() => {
+        downloadCertBtn.innerHTML = '<span>✨ Seal & Bless Our Devotion Forever ✦</span>';
+      }, 4000);
+    }
   }
 
   if (downloadCertBtn) {
@@ -1764,6 +1772,66 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  // ===================================================
+  // 14. DIGITAL PRIVACY & ANTI-DOWNLOAD SECURITY SHIELD
+  // (Prevents unauthorized downloading, copying, inspecting, or saving)
+  // ===================================================
+
+  // 1. Disable Right-Click Context Menu globally
+  window.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    return false;
+  }, { capture: true });
+
+  // 2. Disable Drag-and-Drop of images, audio, or links to desktop or other tabs
+  window.addEventListener('dragstart', (e) => {
+    e.preventDefault();
+    return false;
+  }, { capture: true });
+
+  // 3. Block Download & Inspection Keyboard Shortcuts
+  window.addEventListener('keydown', (e) => {
+    // Allow normal typing inside input or textarea (like the Wishing Lantern)
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+      // Still prevent Ctrl+S inside textarea
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        return false;
+      }
+      return;
+    }
+
+    // F12 (Developer Tools)
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+
+    const ctrlOrCmd = e.ctrlKey || e.metaKey;
+    if (ctrlOrCmd) {
+      const key = e.key.toLowerCase();
+      // Ctrl+S (Save Page), Ctrl+U (View Source), Ctrl+P (Print Page)
+      if (key === 's' || key === 'u' || key === 'p') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C (Inspect Elements)
+      if (e.shiftKey && (key === 'i' || key === 'j' || key === 'c')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+      // Ctrl+A (Select All)
+      if (key === 'a') {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }
+  }, { capture: true });
 
   renderCanvas();
 
