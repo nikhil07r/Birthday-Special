@@ -668,12 +668,13 @@ body {
 }
 
 .seal-monogram {
-  font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
   font-weight: 700;
   color: #fef08a;
-  letter-spacing: 2px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0;
+  line-height: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
 .click-hint {
@@ -1765,11 +1766,12 @@ body {
 
 .seal-monogram-label {
   font-family: var(--font-title);
-  font-size: 0.76rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #fef08a;
-  letter-spacing: 2px;
-  margin-top: 2px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-top: 3px;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
 
@@ -2536,12 +2538,13 @@ body {
 
 .lantern-monogram-glow {
   font-family: var(--font-title);
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: rgba(92, 20, 14, 0.82);
-  letter-spacing: 2px;
+  letter-spacing: 0;
+  line-height: 1;
   z-index: 3;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
   user-select: none;
 }
 

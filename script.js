@@ -1739,7 +1739,7 @@
   initAnimatedFavicon();
 
   // Sweet Romantic Tab Title Presence
-  const MAIN_TAB_TITLE = '👑 Chapter 21: Deepa 📖';
+  const MAIN_TAB_TITLE = '✨ Written In The Stars 🌙';
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       document.title = 'Deepa, come back soon... 🌸';

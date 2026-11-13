@@ -55,7 +55,7 @@ When a song ends, it seamlessly shuffles to another song without repetition.
 ------------------------------------------------------------------------
 🌟 SUMMARY OF ALL MAGICAL HIGHLIGHTS BUILT FOR DEEPA:
 ------------------------------------------------------------------------
-1. Romantic Opening Envelope with D • N Royal Monogram Seal
+1. Romantic Opening Envelope with Royal "D" Monogram Wax Seal
 2. Live Lifetime Magic Counter (Days, Hours, Minutes, Seconds)
 3. 21st Birthday Milestone Cake with 21 flickering candles
    - Tapping "Blow Out All Candles" blows out all flames with realistic smoke, plays champagne cork pops + ascending harp, and cascades golden sparklers & champagne stardust DOWN FROM THE TOP of the screen!
@@ -69,7 +69,7 @@ When a song ends, it seamlessly shuffles to another song without repetition.
 9. Jar of Endless Love & Appreciation (Interactive starlight message drawer)
 10. Modern & Heart-Touching Voice Message Player with dynamic waveform
 11. 3D Rolled Royal Parchment Scroll (Love Letter):
-    - Closed vintage rolled scroll with mahogany knobs, gold inlays, velvet ribbon, and D • N royal wax seal.
+    - Closed vintage rolled scroll with mahogany knobs, gold inlays, velvet ribbon, and royal "D" wax seal.
     - Deepa taps the wax seal to crack it with crystalline chimes and unroll the letter in 3D!
     - Includes a "Roll Letter Back Up" button.
 12. Movable Parallax Starlit Background with live shooting stars (meteors) every few seconds!
